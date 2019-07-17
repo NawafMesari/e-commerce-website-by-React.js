@@ -1,0 +1,83 @@
+
+.main{
+    background-color: beige;
+    padding: 1%;
+    
+    
+   
+
+}
+
+.content-best-offer{
+   
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 100%;
+    margin: 20px 0px;
+}
+.offer-card{
+    width: 150px;
+   
+
+    min-height: 100px;
+
+    border: 2px solid rgb(192, 192, 172);
+    border-radius: 3px;
+    background-color: beige;
+    margin: 4px; 
+
+    box-shadow: 0px 20px 40px gray;
+    transition: 0.4s;
+}
+
+.offer-card:hover{
+    transform: scale(1.1,1.1);
+}
+
+.offer-card > h5{
+
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-weight: bold;
+    
+    
+
+    
+}
+
+.salry{
+
+    padding: 2%;
+
+}
+
+.close{
+    float: left;
+}
+
+.bt-close{
+    border-style:none;
+    color: red;
+    font-weight:bolder;
+    font-size: 200%; 
+    background-color: beige; 
+}
+
+.bt-offer{
+    background-color: rgba(235, 230, 230, 0.6); 
+    border-style: none;
+    border-radius:100px; 
+    cursor: pointer;
+    font-size: 200%;
+    color: black;
+    font-weight: bolder;
+
+}
+
+.bt-offer:hover{
+    background-color: white;
+}
