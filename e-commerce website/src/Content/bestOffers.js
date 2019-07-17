@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import "../CSS/BestOffers.css"
-import { updateExpression } from "@babel/types";
+
 import CardOffer from "./CardOffer";
 
 
@@ -9,10 +9,10 @@ class BestOffers extends Component {
 
     state = {
         offer: [
-            { name: "laptop", salary: 6000 },
-            { name: "iphone", salary: 4000 },
-            { name: "headphone", salary: 66 },
-            { name: "car", salary: 66000 }
+            { name: "laptop", salary: 6000 ,id:1},
+            { name: "iphone", salary: 4000 ,id:2},
+            { name: "headphone", salary: 66,id:3 },
+            { name: "car", salary: 66000 ,id:4}
         ],
         titelOfOffers: "Best Offers this week"
 
@@ -34,10 +34,10 @@ class BestOffers extends Component {
         this.setState({
             offer: [
                
-                { name: "laptop", salary: 6000 ,id:4},
-                { name: "iphone", salary: 4000 ,id:5},
-                { name: "headphone", salary: 66,id:6 },
-                { name: "car", salary: 66000 }
+                { name: "laptop", salary: 6000 ,id:1},
+                { name: "iphone", salary: 4000 ,id:2},
+                { name: "headphone", salary: 66,id:3 },
+                { name: "car", salary: 66000 ,id:4}
             ]
         })
     }
@@ -58,12 +58,35 @@ class BestOffers extends Component {
         )
       }
 
+      changeName =(event,Id)=>{
+
+        const theIndexOfElement = this.state.offer.findIndex((p)=>{
+            return p.id === Id;
+        });
+
+       
+        const theOfferElement = {...this.state.offer[theIndexOfElement]};
+       
+        theOfferElement.name = event.target.value
+
+        const x =[...this.state.offer]
+        x[theIndexOfElement] = theOfferElement;
+
+
+        this.setState(
+            {
+                offer:x
+            }
+        )
+      }
+
     render() {
 
         const item = this.state.offer;
         const element = item.map((ele,index) => {
             return (
-                <CardOffer name={ele.name} salary={ele.salary} key={index} delete={()=>this.deleteCard(index)}/>
+                <CardOffer name={ele.name} salary={ele.salary} key={index} delete={()=>this.deleteCard(index)} 
+                changeName={(event)=>this.changeName(event,ele.id)}/>
             )
         })
 

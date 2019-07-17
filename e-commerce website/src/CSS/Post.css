@@ -1,0 +1,25 @@
+
+.Post-main{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap:wrap;
+    background-color: rgba(187, 243, 247, 0.671);
+}
+
+.post-card{
+    width: 100%;
+    height: auto;
+
+    box-shadow: 0 14px 28px 0 rgba(0,0,0,0.2);
+    background-color: antiquewhite;
+
+    margin: 2%;
+    padding: 1%;
+}
+
+.post-card-content{
+    width: 100%;
+    height: auto;
+    color: red;
+}

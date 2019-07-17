@@ -1,6 +1,6 @@
-import React ,{Component} from "react"
+import React  from "react"
 
-import { Slide,Zoom } from 'react-slideshow-image';
+import { Slide } from 'react-slideshow-image';
 
 import "../CSS/Slide.css"
 

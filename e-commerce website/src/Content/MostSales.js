@@ -24,11 +24,11 @@ class Mostsales extends Component {
 
     render() {
 
-        const sales = this.state.item.map((ele)=>{
+        const sales = this.state.item.map((ele,index)=>{
             return(
                
               
-                   <div className="card">
+                   <div className="card" key={index}>
                   <img src={ele.img} alt="no" width="100px" height="100px"></img>
                     <div className="container">
                         <h4><b> {ele.name}</b></h4> 

@@ -6,6 +6,9 @@ import BestOffers from './Content/bestOffers';
 import Footer from "./Header/Footer"
 import Slideshow from "./Content/Slider"
 import Mostsales from "../src/Content/MostSales"
+import Post from "../src/Content/Post"
+
+
 
 class App extends Component {
 
@@ -13,7 +16,8 @@ class App extends Component {
 
    
     showBestOffer: false,
-    showTheMostSales:false
+    showTheMostSales:false,
+    showThePost:false
    
   }
 
@@ -27,6 +31,10 @@ class App extends Component {
   toggleMostSales = () => {
     const show2 = this.state.showTheMostSales;
     this.setState({ showTheMostSales: !(show2) })
+  }
+  toggleThePost=()=>{
+    const show3 = this.state.showThePost;
+    this.setState({ showThePost: !(show3) })
   }
 
   
@@ -54,6 +62,16 @@ class App extends Component {
       )
     }
 
+    let showPost = null;
+
+    if(this.state.showThePost === true){
+      showPost=(
+        <div>
+          <Post closeThePost={this.toggleThePost}/>
+        </div>
+      )
+    }
+
     return (
       <div className="App">
 
@@ -62,12 +80,12 @@ class App extends Component {
         <Slideshow />
 
         {
-          (this.state.showBestOffer === false && this.state.showTheMostSales===false)?
+          (this.state.showBestOffer === false && this.state.showTheMostSales===false && this.state.showThePost===false)?
           
           <div className="show-content">
             <button onClick={this.toggleBestOffers} >Show Best Offers</button>
             <button onClick={this.toggleMostSales} >Most Sales</button>
-            <button onClick={this.toggleMostSales} >Most Sales</button>
+            <button onClick={this.toggleThePost} >Posts</button>
           </div>
             : null
         }
@@ -79,6 +97,7 @@ class App extends Component {
 
         {showMostSales}
 
+        {showPost}
 
         <Footer />
 

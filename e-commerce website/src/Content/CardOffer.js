@@ -16,9 +16,12 @@ class CardOffer extends Component {
                 <h5 >{this.props.name}</h5>
                 <div className="salry">
                     salary: {this.props.salary}
-                   
-                </div>
+                    <div>
+                <input type="text" onChange={this.props.changeName} value={this.props.name}/>
                 <button onClick={this.props.delete}> DELETE</button>
+                </div>
+                </div>
+                
             </div >
         )
 
