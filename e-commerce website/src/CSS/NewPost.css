@@ -1,0 +1,38 @@
+
+.newpost-content{
+
+    width: 60%;
+    height: auto;
+    margin-top:3% ;
+    margin-bottom: 2%;
+    padding: 1%;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap; 
+
+    box-shadow: 0 14px 28px 0 rgba(0,0,0,0.2);
+    background-color: rgb(74, 229, 240);
+
+    text-align: center;
+}
+
+.box{
+    width: 100%;
+    height: auto;
+   
+    padding: 2%;
+    text-align: center;
+
+}
+
+.box p{
+    font-weight:bolder;
+
+}
+
+.box input,textarea{
+    width:50%;;
+}
+.newpost-content button{
+    width: 10%;
+}
